@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "XFilesFont";
+  src: url("../assets/font/x-files.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "XFilesFont", sans-serif, Comic-Sans-MS;
+  background-color: black;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem;
+  margin: -8px;
+}
+header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+header nav a {
+  color: #0f0;
+  text-decoration: none;
+  font-family: "XFilesFont", sans-serif;
+  text-transform: uppercase;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+header nav a.active {
+  color: hsl(120, 91%, 38%);
+}
+header .alien-icon {
+  width: 50px;
+  height: auto;
+  filter: drop-shadow(0 0 8px #0f0);
+  display: block;
+  object-fit: contain;
+}
+header .alien-icon.left {
+  transform: scaleX(-1);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 0 20px #0f0;
+  color: white;
+}
+.container p {
+  text-align: justify;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0f0;
+  max-width: 275px;
+  padding: 1rem;
+  text-align: center;
+  color: #ccc;
+  font-family: "XFilesFont", sans-serif;
+  margin: 0 0 1.5rem 1.5rem;
+  float: right;
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #000;
+  margin-bottom: 1rem;
+}
+.card h2 {
+  margin: 0.5rem 0;
+  color: #0f0;
+}
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.quote-section {
+  clear: both;
+  background-color: #111;
+  border-left: 5px solid #0f0;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #a0ffa0;
+  box-shadow: 0 0 15px #0f0;
+  border-radius: 8px;
+}
+.quote-section blockquote {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.quote-section .card::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.quote-section cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+  color: #0f0;
+  font-family: "XFilesFont", sans-serif;
+}
+
+.site-footer {
+  background-color: #0a0a0a;
+  padding: 2rem 1rem;
+  margin: -8px;
+  margin-top: -2rem;
+  text-align: center;
+  color: #0f0;
+  font-family: "XFilesFont", sans-serif;
+  box-shadow: 0 0 20px #0f0 inset;
+}
+.site-footer .footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.site-footer .footer-content p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  text-shadow: 0 0 5px #0f0;
+}
+.site-footer .footer-content .footer-credits {
+  font-style: italic;
+  color: #a0ffa0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.alien-icon {
+  width: 50px;
+  height: auto;
+  filter: drop-shadow(0 0 8px #0f0);
+  display: block;
+  object-fit: contain;
+  transition: transform 0.6s ease;
+}
+.alien-icon.left {
+  transform: scaleX(-1);
+}
+.alien-icon:hover {
+  animation: spin 0.6s linear;
+}
+
+/*# sourceMappingURL=style.css.map */

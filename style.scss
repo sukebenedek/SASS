@@ -1,0 +1,258 @@
+// ======= VARIABLES =======
+$bg-dark: #111;
+$bg-darker: #0a0a0a;
+$bg-content: #1a1a1a;
+$text-main: #0f0;
+$text-soft: #a0ffa0;
+$text-light: #ccc;
+$text-link-hover: hsl(120, 91%, 38%);
+$glow-color: #0f0;
+$font-xfiles: 'XFilesFont', sans-serif;
+
+// ======= FONTS =======
+@font-face {
+  font-family: 'XFilesFont';
+  src: url('../assets/font/x-files.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: $font-xfiles, Comic-Sans-MS;
+  background-color: black;
+}
+
+// ======= HEADER =======
+header {
+  background-color: $bg-dark;
+  padding: 1rem;
+  margin: -8px;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  nav a {
+    color: $text-main;
+    text-decoration: none;
+    font-family: $font-xfiles;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: $text-link-hover;
+    }
+  }
+
+  .alien-icon {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 0 8px $glow-color);
+    display: block;
+    object-fit: contain;
+
+    &.left {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+// ======= CONTAINER =======
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: $bg-content;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 0 20px $glow-color;
+  color: white;
+
+  p {
+    text-align: justify;
+  }
+}
+
+// ======= CARD =======
+.card {
+  background-color: $bg-content;
+  border-radius: 10px;
+  box-shadow: 0 0 20px $glow-color;
+  max-width: 275px;
+  padding: 1rem;
+  text-align: center;
+  color: $text-light;
+  font-family: $font-xfiles;
+  margin: 0 0 1.5rem 1.5rem;
+  float: right;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #000;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin: 0.5rem 0;
+    color: $text-main;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+
+// ======= QUOTE SECTION =======
+.quote-section {
+  clear: both;
+  background-color: $bg-dark;
+  border-left: 5px solid $glow-color;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: $text-soft;
+  box-shadow: 0 0 15px $glow-color;
+  border-radius: 8px;
+
+  blockquote {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .card::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: bold;
+    color: $text-main;
+    font-family: $font-xfiles;
+  }
+}
+
+// ======= FOOTER =======
+.site-footer {
+  background-color: $bg-darker;
+  padding: 2rem 1rem;
+  margin: -8px;
+  margin-top: -2rem;
+  text-align: center;
+  color: $text-main;
+  font-family: $font-xfiles;
+  box-shadow: 0 0 20px $glow-color inset;
+
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      text-shadow: 0 0 5px $glow-color;
+    }
+
+    .footer-credits {
+      font-style: italic;
+      color: $text-soft;
+    }
+  }
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .alien-icon {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 0 8px $glow-color);
+    display: block;
+    object-fit: contain;
+    transition: transform 0.6s ease;
+  
+    &.left {
+      transform: scaleX(-1);
+    }
+  
+    &:hover {
+      animation: spin 0.6s linear;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
