@@ -37,9 +37,6 @@ header nav a {
   font-family: "XFilesFont", sans-serif;
   text-transform: uppercase;
 }
-header nav a:hover {
-  text-decoration: underline;
-}
 header nav a.active {
   color: hsl(120, 91%, 38%);
 }
