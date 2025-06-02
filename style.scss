@@ -7,12 +7,12 @@ $text-soft: #a0ffa0;
 $text-light: #ccc;
 $text-link-hover: hsl(120, 91%, 38%);
 $glow-color: #0f0;
-$font-xfiles: 'XFilesFont', sans-serif;
+$font-xfiles: 'XFilesFont', Comic-Sans-MS, sans-serif;
 
 // ======= FONTS =======
 @font-face {
   font-family: 'XFilesFont';
-  src: url('../assets/font/x-files.ttf') format('truetype');
+  src: url('assets/font/x-files.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -227,7 +227,7 @@ header {
   
   .fun-facts {
     background-color: #141414;
-    border-left: 4px solid #0f0;
+    border-left: 4px solid $text-main;
     padding: 2rem;
     margin-top: 2rem;
     box-shadow: 0 0 30px black;
@@ -235,7 +235,7 @@ header {
     border-radius: 8px;
     clear: both;  
     h2 {
-      color: #0f0;
+      color: $text-main;
       font-family: 'XFilesFont', sans-serif;
       margin-bottom: 1rem;
     }
@@ -250,7 +250,7 @@ header {
         font-style: italic;
   
         &::marker {
-          color: #0f0;
+          color: $text-main;
         }
       }
     }
@@ -284,9 +284,8 @@ header {
   clear: both;
 }
 
-$page-glow: #0f0;
-$card-bg: #1a1a1a;
-$text-main: #ccc;
+$page-glow: $text-main;
+$card-bg: $bg-content;
 
 .page-title {
   text-align: center;
@@ -321,7 +320,6 @@ $text-main: #ccc;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 30px lighten($page-glow, 10%);
   }
 
   h2 {
@@ -379,7 +377,6 @@ a {
   }
 
   &:hover {
-    color: lighten(#00ff00, 20%);
     
     &::after {
       transform: scaleX(1);
@@ -391,10 +388,135 @@ a {
 
 
 
+.alien-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.alien-card {
+  background-color: $bg-content;
+  box-shadow: 0 0 15px $text-main;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 280px;
+  color: #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px $text-main;
+  }
+
+  img {
+    width: 100%;
+    max-height: 220px;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    border-radius: 12px;
+    animation: float 2s ease-in-out infinite alternate;
+  }
+
+  h2 {
+    font-family: 'XFilesFont', sans-serif;
+    color: $text-soft;
+    margin: 0.5rem 0;
+    text-shadow: 0 0 8px $text-main;
+
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
 
 
+.shadow-library {
+  padding: 1.5rem;
+  font-family: 'XFilesFont', sans-serif;
+
+  h1, h2 {
+    text-align: center;
+    text-shadow: 0 0 8px $text-main;
+    margin: 2rem 0 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: $text-soft;
+  }
+
+  p {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-item {
+    background-color: $bg-dark;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 280px;
+    box-shadow: 0 0 15px $text-main;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px $text-main;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid black;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.centered-text p{
+  text-align: center;
+}
 
 
+h1 {
+  color: white !important;
+    text-shadow: 0 0 8px $text-main !important;
+
+}
 
 
 

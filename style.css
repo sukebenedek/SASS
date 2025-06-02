@@ -1,11 +1,11 @@
 @font-face {
   font-family: "XFilesFont";
-  src: url("../assets/font/x-files.ttf") format("truetype");
+  src: url("assets/font/x-files.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 body {
-  font-family: "XFilesFont", sans-serif, Comic-Sans-MS;
+  font-family: "XFilesFont", Comic-Sans-MS, sans-serif, Comic-Sans-MS;
   background-color: black;
 }
 
@@ -34,7 +34,7 @@ header nav ul {
 header nav a {
   color: #0f0;
   text-decoration: none;
-  font-family: "XFilesFont", sans-serif;
+  font-family: "XFilesFont", Comic-Sans-MS, sans-serif;
   text-transform: uppercase;
 }
 header nav a.active {
@@ -72,7 +72,7 @@ header .alien-icon.left {
   padding: 1rem;
   text-align: center;
   color: #ccc;
-  font-family: "XFilesFont", sans-serif;
+  font-family: "XFilesFont", Comic-Sans-MS, sans-serif;
   margin: 0 0 1.5rem 1.5rem;
   float: right;
 }
@@ -118,7 +118,7 @@ header .alien-icon.left {
   font-style: normal;
   font-weight: bold;
   color: #0f0;
-  font-family: "XFilesFont", sans-serif;
+  font-family: "XFilesFont", Comic-Sans-MS, sans-serif;
 }
 
 .site-footer {
@@ -128,7 +128,7 @@ header .alien-icon.left {
   margin-top: -2rem;
   text-align: center;
   color: #0f0;
-  font-family: "XFilesFont", sans-serif;
+  font-family: "XFilesFont", Comic-Sans-MS, sans-serif;
   box-shadow: 0 0 20px #0f0 inset;
 }
 .site-footer .footer-content {
@@ -264,13 +264,12 @@ header .alien-icon.left {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 0 20px #0f0;
-  color: #ccc;
+  color: #0f0;
   width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .ufo-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px #33ff33;
 }
 .ufo-card h2 {
   color: #0f0;
@@ -320,12 +319,121 @@ a::after {
   transform-origin: right;
   transition: transform 0.3s ease;
 }
-a:hover {
-  color: #66ff66;
-}
 a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.alien-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.alien-card {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 15px #0f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 280px;
+  color: #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.alien-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #0f0;
+}
+.alien-card img {
+  width: 100%;
+  max-height: 220px;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+  border-radius: 12px;
+  animation: float 2s ease-in-out infinite alternate;
+}
+.alien-card h2 {
+  font-family: "XFilesFont", sans-serif;
+  color: #a0ffa0;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 8px #0f0;
+}
+.alien-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+.shadow-library {
+  padding: 1.5rem;
+  font-family: "XFilesFont", sans-serif;
+}
+.shadow-library h1, .shadow-library h2 {
+  text-align: center;
+  text-shadow: 0 0 8px #0f0;
+  margin: 2rem 0 1rem;
+}
+.shadow-library h1 {
+  font-size: 2rem;
+}
+.shadow-library h2 {
+  font-size: 1.5rem;
+  color: #a0ffa0;
+}
+.shadow-library p {
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+.shadow-library .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.shadow-library .gallery-item {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  box-shadow: 0 0 15px #0f0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shadow-library .gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #0f0;
+}
+.shadow-library .gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid black;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+.shadow-library .gallery-item p {
+  font-size: 0.95rem;
+}
+
+.centered-text p {
+  text-align: center;
+}
+
+h1 {
+  color: white !important;
+  text-shadow: 0 0 8px #0f0 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
